@@ -1,4 +1,4 @@
-package coding_test;
+package programmers;
 
 public class Array1 {
 //
