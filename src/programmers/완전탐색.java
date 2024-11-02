@@ -8,7 +8,7 @@ import java.util.List;
 
 public class 완전탐색 {
 /*
- * 포자 삼인방은 모의고사에 수학 문제를 전부 찍으려 합니다.
+ * 수포자 삼인방은 모의고사에 수학 문제를 전부 찍으려 합니다.
  *  수포자는 1번 문제부터 마지막 문제까지 다음과 같이 찍습니다.
 1번 수포자가 찍는 방식: 1, 2, 3, 4, 5, 
 2번 수포자가 찍는 방식: 2, 1, 2, 3, 2, 4, 2, 5, 
@@ -21,7 +21,7 @@ public class 완전탐색 {
 	public static void main(String[] args) {
 		class Solution {
 		    public int[] solution() {
-		        int[] answers = {1,2,3,4,5};
+		        int[] answers = {1,1,1,1,1};
 		        
 		        int[] a = {1,2,3,4,5};
 		        int[] b = {2,1,2,3,2,4,2,5};
@@ -31,29 +31,29 @@ public class 완전탐색 {
 		        
 		        //a학생 비교
 		        int count = 0;
-		        for (int i = 0; i < a.length; i++) {
-		        		int answersLength = answers.length; //5
-		        		if(answers[i % answersLength] == a[i]) {
+		        for (int i = 0; i < answers.length; i++) {
+		        		if(answers[i] == a[i%a.length]) {
 		        			count++;
 					}
 				}
+		        System.out.println(count);
 		        score.add(count);
 		        count = 0;
-		        for (int i = 0; i < b.length; i++) {
-		        	int answersLength = answers.length; //5
-		        	if(answers[i % answersLength] == b[i]) {
+		        for (int i = 0; i < answers.length; i++) {
+		        	if(answers[i] == b[i % b.length]) {
+		        		count++;
+		        	}
+		        }
+		        System.out.println(count);
+		        score.add(count);
+		        count = 0;
+		        for (int i = 0; i < answers.length; i++) {
+		        	if(answers[i] == c[i%c.length]) {
 		        		count++;
 		        	}
 		        }
 		        score.add(count);
-		        count = 0;
-		        for (int i = 0; i < c.length; i++) {
-		        	int answersLength = answers.length; //5
-		        	if(answers[i % answersLength] == c[i]) {
-		        		count++;
-		        	}
-		        }
-		        score.add(count);
+		        System.out.println(count);
 		        
 		        
 		        List<Integer> result = new ArrayList<>();
@@ -64,15 +64,15 @@ public class 완전탐색 {
 	        		}
 		        }
 		        
-		        System.out.println(result);
-		        
-        		int[] array = result.stream().mapToInt(Integer::intValue).toArray();
-        		return array;
+        		 return result.stream().mapToInt(Integer::intValue).toArray();
+        		
 		    }
 		}
 		
 		Solution sol = new Solution();
-		sol.solution();
+		int[] array = sol.solution();
+		
+		System.out.println(Arrays.toString(array));
 	}
 
 }
