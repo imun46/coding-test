@@ -57,9 +57,10 @@ public class 완전탐색 {
 		        
 		        
 		        List<Integer> result = new ArrayList<>();
+		        int maxScore = Collections.max(score);
 		        
 		        for (int i = 0; i < score.size(); i++) {
-	        		if(score.get(i) == Collections.max(score)) {
+	        		if(score.get(i) == maxScore) {
 	        			result.add(i+1);
 	        		}
 		        }
