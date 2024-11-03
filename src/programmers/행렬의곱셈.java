@@ -19,6 +19,7 @@ public class 행렬의곱셈 {
 						 result += arr1[i][j]*arr2[i][j];
 					}
 		        	System.out.println(result);
+		        	
 				}
 		        
 		        
