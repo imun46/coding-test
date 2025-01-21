@@ -13,22 +13,20 @@ public class 두개뽑아서더하기 {
     public static void main(String[] args) {
         class Solution {
             public int[] solution(int[] numbers) {
-                List<Integer> list = new ArrayList<>();
-                int count = 0;
+
+                /*
+                * set 중복 제거 해서 담고  =>  list 변환 => 배열로 저장
+                * */
+
+                Set<Integer> set = new HashSet<>(); // set은 중복 자동 제거
 
                 for (int i = 0; i < numbers.length-1; i++) {
                     for (int j = i + 1; j < numbers.length; j++) {
-                        list.add(numbers[i]+numbers[j]);
-                    }
-                }
-                for (int i = 0; i < list.size()-1; i++) {
-                    for (int j = i + 1; j < list.size(); j++) {
-                        if(list.get(i).equals(list.get(j))){
-                            list.remove(j);
-                        }
+                        set.add(numbers[i]+numbers[j]);
                     }
                 }
 
+                List<Integer> list = new ArrayList<>(set);
                 Collections.sort(list);
 
                 int[] answer = new int[list.size()];
