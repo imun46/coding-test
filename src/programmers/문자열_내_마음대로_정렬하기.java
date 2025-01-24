@@ -33,6 +33,22 @@ public class 문자열_내_마음대로_정렬하기 {
 
                 answer = strings;
                 return answer;
+
+
+                /*
+                다른 사람 답안
+                String[] answer = {};
+                ArrayList<String> arr = new ArrayList<>();
+                for (int i = 0; i < strings.length; i++) {
+                    arr.add("" + strings[i].charAt(n) + strings[i]);
+                }
+                Collections.sort(arr);
+                answer = new String[arr.size()];
+                for (int i = 0; i < arr.size(); i++) {
+                    answer[i] = arr.get(i).substring(1, arr.get(i).length());
+                }
+                return answer;
+                 */
             }
         }
         Solution solution = new Solution();
