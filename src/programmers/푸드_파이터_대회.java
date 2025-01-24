@@ -46,6 +46,19 @@ public class 푸드_파이터_대회 {
                 for (int i = 0; i < list.size(); i++) {
                     answer += list.get(i);
                 }
+
+                /*
+                다른 사람 정답
+                for (int i = food.length - 1; i > 0; i--) {
+                    for (int j = 0; j < food[i] / 2; j++) {
+                        answer = i + answer + i;
+                    }
+                }
+                * */
+
+
+
+
                 return answer;
             }
         }
