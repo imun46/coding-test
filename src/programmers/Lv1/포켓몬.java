@@ -19,4 +19,6 @@ public class 포켓몬 {
         Solution solution = new Solution();
         System.out.println(solution.solution(new int[]{3,1,2,3}));
     }
+
 }
+
