@@ -13,11 +13,7 @@ public class 포켓몬 {
                     map.put(nums[i], nums[i]);
                 }
 
-                if(nums.length/2 > map.size()) {
-                    return answer =  map.size();
-                }
-                answer = nums.length/2;
-                return answer;
+                return nums.length/2 > map.size() ? map.size() : nums.length/2;
             }
         }
         Solution solution = new Solution();
