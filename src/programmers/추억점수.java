@@ -1,13 +1,14 @@
 package programmers;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class 추억점수 {
     public static void main(String[] args) {
         class Solution {
             public int[] solution(String[] name, int[] yearning, String[][] photo) {
-                List<Integer> list = new ArrayList<>();
+/*                List<Integer> list = new ArrayList<>();
 
                     for (int j = 0; j < photo.length; j++) {
                         int result = 0;
@@ -24,7 +25,27 @@ public class 추억점수 {
                 int[] result = new int[list.size()];
                 for (int i = 0; i < list.size(); i++) {
                     result[i] = list.get(i);
+                }*/
+
+                /* HashMap 이용 */
+                int[] result = new int[photo.length];
+                HashMap<String, Integer> map = new HashMap<>();
+
+                for (int i = 0; i < name.length; i++) {
+                    map.put(name[i],yearning[i]); // may,5
                 }
+
+                for (int i = 0; i < photo.length; i++) {
+                    String[] persons = photo[i];
+                    int score = 0;
+                    for (int j = 0; j < persons.length; j++) {
+                        if (map.containsKey(persons[j])) {
+                            score += map.get(persons[j]);
+                        }
+                    }
+                    result[i] = score;
+                }
+
 
                 return result;
             }
