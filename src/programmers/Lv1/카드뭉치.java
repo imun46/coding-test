@@ -1,7 +1,4 @@
-package programmers;
-
-import java.util.ArrayList;
-import java.util.List;
+package programmers.Lv1;
 
 public class 카드뭉치 {
     public static void main(String[] args) {

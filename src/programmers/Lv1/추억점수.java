@@ -1,8 +1,6 @@
-package programmers;
+package programmers.Lv1;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class 추억점수 {
     public static void main(String[] args) {
