@@ -5,18 +5,19 @@ public class 숫자의_표현 {
         class Solution {
             public int solution(int n) {
                 int answer = 0;
-                int count = 0;
-
                 for (int i = 1; i <= n; i++) {
-                    int result = 0;
-                    for (int j = count; j <= n; j++) {
-                        if(result == n){
+                    int sum = 0;
+                    for (int j = i; j <= n; j++) {
+                        sum += j;
+
+                        if(sum == n){
                             answer++;
                             break;
                         }
-                            result += j;
+                        if (sum > n){
+                            break;
+                        }
                     }
-                    count++;
                 }
 
                 return answer;
