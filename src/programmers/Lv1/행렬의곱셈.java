@@ -1,4 +1,4 @@
-package programmers;
+package programmers.Lv1;
 
 public class 행렬의곱셈 {
 	public static void main(String[] args) {

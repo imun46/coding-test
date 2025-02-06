@@ -1,4 +1,4 @@
-package programmers;
+package programmers.Lv1;
 
 public class 시저암호 {
 
