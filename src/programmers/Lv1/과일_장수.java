@@ -7,7 +7,7 @@ public class 과일_장수 {
         class Solution {
             public int solution(int k, int m, int[] score) {
                 int answer = 0;
-                List<Integer> list = new ArrayList<>();
+               /* List<Integer> list = new ArrayList<>();
 
                 for (int i = 0; i < score.length; i++) {
                     list.add(score[i]);
@@ -25,6 +25,12 @@ public class 과일_장수 {
                             answer += list.get(i) * m;
                         }
                     }
+                }*/
+
+                Arrays.sort(score); // 배열 정렬
+
+                for (int i = score.length; i >= m ; i -= m) {
+                    answer += score[i - m] * m;
                 }
 
                 return answer;
