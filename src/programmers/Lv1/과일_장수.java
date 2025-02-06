@@ -13,10 +13,7 @@ public class 과일_장수 {
                     list.add(score[i]);
                 }
                 list.sort(Comparator.reverseOrder());
-                for (int i = 0; i < list.size(); i++) {
-                    System.out.print(list.get(i));
-                }
-                System.out.println();
+
                 int rowPoint = list.get(list.size() - 1);
                 int count = 1;
                 for (int i = 0; i < list.size(); i++) {
@@ -24,10 +21,8 @@ public class 과일_장수 {
                         count++;
                         if(list.get(i) == rowPoint && rowPoint != k){ // 2
                             answer += rowPoint * m;
-                            System.out.println("i=" +i +" answer="+answer);
                         }else{
                             answer += list.get(i) * m;
-                            System.out.println(count + " i=" +i +" answer="+answer);
                         }
                     }
                 }
