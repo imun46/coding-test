@@ -17,7 +17,7 @@ public class 소수_찾기 {
                         }
                         check = true;
                     }
-                    answer = check ? answer + 1 : answer + 0;
+                    answer = check ? answer + 1 : answer;
                     count ++;
                 }
                 return answer;
